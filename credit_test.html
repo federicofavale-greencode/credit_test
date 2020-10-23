@@ -6,15 +6,15 @@
 </head>
 <body>
     
-    <script>
+<script>
     window.checkout = function(){
         window.parent.postMessage("checkout", "*");
     }
-    </script>
+</script>
 
 Aca va el fomulario de Mutuales
 Esto esta en otro dominio
-esto es una simulacion de como Mutuales debe llamar a la funcion publica
+esto es una simulacion de como Mutuales debe enviar un msg
 <button onclick="window.checkout()">
     ejecutar funcion publica
 </button>
