@@ -7,25 +7,15 @@
 <body>
     
     <script>
-    window.addEventListener('message', event => {
-    // IMPORTANT: check the origin of the data! 
-    if (event.origin.startsWith('http://ecomerce-mutuales-web-staging.s3-website-us-west-2.amazonaws.com')) { 
-        // The data was sent from your site.
-        // Data sent with postMessage is stored in event.data:
-        console.log(event.data); 
-    } else {
-        // The data was NOT sent from your site! 
-        // Be careful! Do not use it. This else branch is
-        // here just for clarity, you usually shouldn't need it.
-        return; 
-    } 
-}); 
+    window.checkout(){
+        window.parent.postMessage("checkout", "*");
+    }
     </script>
 
 Aca va el fomulario de Mutuales
 Esto esta en otro dominio
 esto es una simulacion de como Mutuales debe llamar a la funcion publica
-<button onclick="window.parent.checkoutMutualCredit()">
+<button onclick="window.checkout()">
     ejecutar funcion publica
 </button>
 
